@@ -1,0 +1,1154 @@
+[
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e08a"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Alto 800",
+    "vehicle_category": "Car",
+    "start_year": 2008,
+    "end_year": 2022
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e08b"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Alto K10",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2022
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e08c"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Wagon R",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e08d"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Swift",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e08e"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Dzire",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e08f"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Baleno",
+    "vehicle_category": "Car",
+    "start_year": 2015,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e090"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Ignis",
+    "vehicle_category": "Car",
+    "start_year": 2016,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e091"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Celerio",
+    "vehicle_category": "Car",
+    "start_year": 2014,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e092"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "S-Presso",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e093"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Ciaz",
+    "vehicle_category": "Car",
+    "start_year": 2014,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e094"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Ertiga",
+    "vehicle_category": "Car",
+    "start_year": 2012,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e095"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "XL6",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e096"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Brezza",
+    "vehicle_category": "Car",
+    "start_year": 2016,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e097"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Grand Vitara",
+    "vehicle_category": "Car",
+    "start_year": 2022,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e098"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Fronx",
+    "vehicle_category": "Car",
+    "start_year": 2022,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e099"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Invicto",
+    "vehicle_category": "Car",
+    "start_year": 2024,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e09a"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Jimny",
+    "vehicle_category": "Car",
+    "start_year": 2018,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e09b"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "model_name": "Wagon R Flex Fuel",
+    "vehicle_category": "Car",
+    "start_year": 2025,
+    "end_year": 2026
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e09c"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06c"
+    },
+    "model_name": "Santro",
+    "vehicle_category": "Car",
+    "start_year": 2018,
+    "end_year": 2023
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e09d"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06c"
+    },
+    "model_name": "Grand i10 NIOS",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e09e"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06c"
+    },
+    "model_name": "i10 (older)",
+    "vehicle_category": "Car",
+    "start_year": 2007,
+    "end_year": 2019
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e09f"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06c"
+    },
+    "model_name": "i20",
+    "vehicle_category": "Car",
+    "start_year": 2014,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0a0"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06c"
+    },
+    "model_name": "Verna",
+    "vehicle_category": "Car",
+    "start_year": 2011,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0a1"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06c"
+    },
+    "model_name": "Aura",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0a2"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06c"
+    },
+    "model_name": "Exter",
+    "vehicle_category": "Car",
+    "start_year": 2023,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0a3"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06c"
+    },
+    "model_name": "Venue",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0a4"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06c"
+    },
+    "model_name": "Creta",
+    "vehicle_category": "Car",
+    "start_year": 2015,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0a5"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06c"
+    },
+    "model_name": "Alcazar",
+    "vehicle_category": "Car",
+    "start_year": 2021,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0a6"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06c"
+    },
+    "model_name": "Tucson",
+    "vehicle_category": "Car",
+    "start_year": 2016,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0a7"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06d"
+    },
+    "model_name": "Tiago",
+    "vehicle_category": "Car",
+    "start_year": 2016,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0a8"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06d"
+    },
+    "model_name": "Tigor",
+    "vehicle_category": "Car",
+    "start_year": 2017,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0a9"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06d"
+    },
+    "model_name": "Altroz",
+    "vehicle_category": "Car",
+    "start_year": 2020,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0aa"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06d"
+    },
+    "model_name": "Nexon",
+    "vehicle_category": "Car",
+    "start_year": 2017,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ab"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06d"
+    },
+    "model_name": "Harrier",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ac"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06d"
+    },
+    "model_name": "Punch",
+    "vehicle_category": "Car",
+    "start_year": 2021,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ad"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06d"
+    },
+    "model_name": "Curvv",
+    "vehicle_category": "Car",
+    "start_year": 2024,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ae"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06d"
+    },
+    "model_name": "Safari",
+    "vehicle_category": "Car",
+    "start_year": 2021,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0af"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06e"
+    },
+    "model_name": "Thar",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0b0"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06e"
+    },
+    "model_name": "Scorpio",
+    "vehicle_category": "Car",
+    "start_year": 2014,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0b1"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06e"
+    },
+    "model_name": "XUV700",
+    "vehicle_category": "Car",
+    "start_year": 2021,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0b2"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06e"
+    },
+    "model_name": "XUV3XO",
+    "vehicle_category": "Car",
+    "start_year": 2024,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0b3"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06e"
+    },
+    "model_name": "Marazzo",
+    "vehicle_category": "Car",
+    "start_year": 2018,
+    "end_year": 2024
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0b4"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06e"
+    },
+    "model_name": "Bolero",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0b5"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06f"
+    },
+    "model_name": "Fortuner",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0b6"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06f"
+    },
+    "model_name": "Innova Crysta",
+    "vehicle_category": "Car",
+    "start_year": 2012,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0b7"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06f"
+    },
+    "model_name": "Glanza",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0b8"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06f"
+    },
+    "model_name": "Urban Cruiser Hyryder",
+    "vehicle_category": "Car",
+    "start_year": 2022,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0b9"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e06f"
+    },
+    "model_name": "Rumion",
+    "vehicle_category": "Car",
+    "start_year": 2022,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ba"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e070"
+    },
+    "model_name": "City",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0bb"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e070"
+    },
+    "model_name": "Amaze",
+    "vehicle_category": "Car",
+    "start_year": 2013,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0bc"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e070"
+    },
+    "model_name": "WR-V",
+    "vehicle_category": "Car",
+    "start_year": 2017,
+    "end_year": 2023
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0bd"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e070"
+    },
+    "model_name": "Elevate",
+    "vehicle_category": "Car",
+    "start_year": 2023,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0be"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e071"
+    },
+    "model_name": "Seltos",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0bf"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e071"
+    },
+    "model_name": "Sonet",
+    "vehicle_category": "Car",
+    "start_year": 2020,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0c0"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e071"
+    },
+    "model_name": "Carens",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0c1"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e071"
+    },
+    "model_name": "Carnival",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0c2"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e071"
+    },
+    "model_name": "Syros",
+    "vehicle_category": "Car",
+    "start_year": 2024,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0c3"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e072"
+    },
+    "model_name": "Kushaq",
+    "vehicle_category": "Car",
+    "start_year": 2021,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0c4"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e072"
+    },
+    "model_name": "Slavia",
+    "vehicle_category": "Car",
+    "start_year": 2020,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0c5"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e073"
+    },
+    "model_name": "Taigun",
+    "vehicle_category": "Car",
+    "start_year": 2021,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0c6"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e073"
+    },
+    "model_name": "Virtus",
+    "vehicle_category": "Car",
+    "start_year": 2022,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0c7"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e07c"
+    },
+    "model_name": "A3",
+    "vehicle_category": "Car",
+    "start_year": 2015,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0c8"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e074"
+    },
+    "model_name": "Magnite",
+    "vehicle_category": "Car",
+    "start_year": 2020,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0c9"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e075"
+    },
+    "model_name": "Kwid",
+    "vehicle_category": "Car",
+    "start_year": 2015,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ca"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e075"
+    },
+    "model_name": "Triber",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0cb"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e076"
+    },
+    "model_name": "Hector",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0cc"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e076"
+    },
+    "model_name": "ZS EV",
+    "vehicle_category": "Car",
+    "start_year": 2020,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0cd"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e077"
+    },
+    "model_name": "Compass",
+    "vehicle_category": "Car",
+    "start_year": 2017,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ce"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e078"
+    },
+    "model_name": "EcoSport",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2022
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0cf"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e079"
+    },
+    "model_name": "Beat",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2019
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0d0"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e07a"
+    },
+    "model_name": "3 Series",
+    "vehicle_category": "Car",
+    "start_year": 2012,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0d1"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e07b"
+    },
+    "model_name": "C-Class",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0d2"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e07c"
+    },
+    "model_name": "Q5",
+    "vehicle_category": "Car",
+    "start_year": 2013,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0d3"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e07d"
+    },
+    "model_name": "XC90",
+    "vehicle_category": "Car",
+    "start_year": 2015,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0d4"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e07e"
+    },
+    "model_name": "Splendor Plus",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0d5"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e07e"
+    },
+    "model_name": "Xtreme 160R",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2018,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0d6"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e07e"
+    },
+    "model_name": "Passion",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0d7"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e07f"
+    },
+    "model_name": "Activa 125",
+    "vehicle_category": "Scooter",
+    "start_year": 2014,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0d8"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e07f"
+    },
+    "model_name": "CB Shine",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0d9"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e07f"
+    },
+    "model_name": "Hornet 2.0",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0da"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e080"
+    },
+    "model_name": "Apache RTR 160",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2012,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0db"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e080"
+    },
+    "model_name": "Ntorq 125",
+    "vehicle_category": "Scooter",
+    "start_year": 2018,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0dc"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e081"
+    },
+    "model_name": "Pulsar NS160",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2013,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0dd"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e081"
+    },
+    "model_name": "Dominar 400",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2016,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0de"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e082"
+    },
+    "model_name": "Classic 350",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2014,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0df"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e082"
+    },
+    "model_name": "Himalayan",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2016,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0e0"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e083"
+    },
+    "model_name": "FZ-S",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2011,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0e1"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e083"
+    },
+    "model_name": "R15",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2011,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0e2"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e084"
+    },
+    "model_name": "Gixxer 150",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2014,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0e3"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e084"
+    },
+    "model_name": "Access 125",
+    "vehicle_category": "Scooter",
+    "start_year": 2016,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0e4"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e085"
+    },
+    "model_name": "Duke 200",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2012,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0e5"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e085"
+    },
+    "model_name": "Duke 390",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2013,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0e6"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e086"
+    },
+    "model_name": "Jawa Classic",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2018,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0e7"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e087"
+    },
+    "model_name": "Roadster",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2022,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0e8"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e088"
+    },
+    "model_name": "Ninja 300",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2013,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0e9"
+    },
+    "brand_id": {
+      "$oid": "68bd6275306ad6922b42e089"
+    },
+    "model_name": "Imperiale 400",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2019,
+    "end_year": 2025
+  }
+]

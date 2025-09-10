@@ -1,0 +1,90 @@
+[
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7e6"
+    },
+    "transmission_code": "MT",
+    "name": "Manual",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7e7"
+    },
+    "transmission_code": "AT",
+    "name": "Automatic (TC)",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7e8"
+    },
+    "transmission_code": "AMT",
+    "name": "Automated Manual",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7e9"
+    },
+    "transmission_code": "CVT",
+    "name": "CVT",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7ea"
+    },
+    "transmission_code": "IVT",
+    "name": "IVT (Hyundai/Kia)",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7eb"
+    },
+    "transmission_code": "DCT",
+    "name": "DCT",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7ec"
+    },
+    "transmission_code": "eCVT",
+    "name": "eCVT (Hybrid)",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7ed"
+    },
+    "transmission_code": "4S",
+    "name": "Motorcycle 4-speed",
+    "gears": 4
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7ee"
+    },
+    "transmission_code": "5S",
+    "name": "Motorcycle 5-speed",
+    "gears": 5
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7ef"
+    },
+    "transmission_code": "6S",
+    "name": "Motorcycle 6-speed",
+    "gears": 6
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7f0"
+    },
+    "transmission_code": "SCOOTER_CVT",
+    "name": "Scooter CVT",
+    "gears": null
+  }
+]

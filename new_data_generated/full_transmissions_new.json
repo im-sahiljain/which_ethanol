@@ -1,0 +1,98 @@
+[
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ea"
+    },
+    "transmission_code": "MT",
+    "name": "Manual",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0eb"
+    },
+    "transmission_code": "AMT",
+    "name": "Automated Manual",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ec"
+    },
+    "transmission_code": "AT",
+    "name": "Automatic (torque-converter)",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ed"
+    },
+    "transmission_code": "DCT",
+    "name": "Dual-Clutch",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ee"
+    },
+    "transmission_code": "CVT",
+    "name": "CVT",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ef"
+    },
+    "transmission_code": "IVT",
+    "name": "IVT (Hyundai/Kia)",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0f0"
+    },
+    "transmission_code": "4S",
+    "name": "4-speed (bike)",
+    "gears": 4
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0f1"
+    },
+    "transmission_code": "5S",
+    "name": "5-speed (bike)",
+    "gears": 5
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0f2"
+    },
+    "transmission_code": "6S",
+    "name": "6-speed (bike)",
+    "gears": 6
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0f3"
+    },
+    "transmission_code": "SCOOTER_CVT",
+    "name": "Scooter CVT",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0f4"
+    },
+    "transmission_code": "eCVT",
+    "name": "eCVT",
+    "gears": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0f5"
+    },
+    "transmission_code": "SINGLE",
+    "name": "SINGLE",
+    "gears": null
+  }
+]

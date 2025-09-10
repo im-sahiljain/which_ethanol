@@ -1,0 +1,343 @@
+[
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e06b"
+    },
+    "brand_name": "Maruti Suzuki",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e06c"
+    },
+    "brand_name": "Hyundai",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e06d"
+    },
+    "brand_name": "Tata",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e06e"
+    },
+    "brand_name": "Mahindra",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e06f"
+    },
+    "brand_name": "Toyota",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e070"
+    },
+    "brand_name": "Honda",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e071"
+    },
+    "brand_name": "Kia",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e072"
+    },
+    "brand_name": "\u0160koda",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e073"
+    },
+    "brand_name": "Volkswagen",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e074"
+    },
+    "brand_name": "Nissan",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e075"
+    },
+    "brand_name": "Renault",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e076"
+    },
+    "brand_name": "MG",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e077"
+    },
+    "brand_name": "Jeep",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e078"
+    },
+    "brand_name": "Ford",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e079"
+    },
+    "brand_name": "Chevrolet",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e07a"
+    },
+    "brand_name": "BMW",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e07b"
+    },
+    "brand_name": "Mercedes-Benz",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e07c"
+    },
+    "brand_name": "Audi",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e07d"
+    },
+    "brand_name": "Volvo",
+    "type": "Car",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e07e"
+    },
+    "brand_name": "Hero",
+    "type": "Two-Wheeler",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e07f"
+    },
+    "brand_name": "Honda (2W)",
+    "type": "Two-Wheeler",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e080"
+    },
+    "brand_name": "TVS",
+    "type": "Two-Wheeler",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e081"
+    },
+    "brand_name": "Bajaj",
+    "type": "Two-Wheeler",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e082"
+    },
+    "brand_name": "Royal Enfield",
+    "type": "Two-Wheeler",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e083"
+    },
+    "brand_name": "Yamaha",
+    "type": "Two-Wheeler",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e084"
+    },
+    "brand_name": "Suzuki (2W)",
+    "type": "Two-Wheeler",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e085"
+    },
+    "brand_name": "KTM",
+    "type": "Two-Wheeler",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e086"
+    },
+    "brand_name": "Jawa",
+    "type": "Two-Wheeler",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e087"
+    },
+    "brand_name": "Yezdi",
+    "type": "Two-Wheeler",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e088"
+    },
+    "brand_name": "Kawasaki",
+    "type": "Two-Wheeler",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e089"
+    },
+    "brand_name": "Benelli",
+    "type": "Two-Wheeler",
+    "country": null,
+    "created_at": {
+      "$date": "2025-09-07T00:00:00.000Z"
+    }
+  }
+]

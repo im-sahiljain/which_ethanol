@@ -1,0 +1,302 @@
+[
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0fd"
+    },
+    "fuel": "Petrol",
+    "engine_family": "1.0 Turbo",
+    "displacement_cc": 998,
+    "aspiration": "Turbo",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0fe"
+    },
+    "fuel": "Petrol",
+    "engine_family": "1.0 NA",
+    "displacement_cc": 998,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e0ff"
+    },
+    "fuel": "Petrol",
+    "engine_family": "1.2 NA",
+    "displacement_cc": 1197,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e100"
+    },
+    "fuel": "Petrol",
+    "engine_family": "1.4 NA",
+    "displacement_cc": 1399,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e101"
+    },
+    "fuel": "Petrol",
+    "engine_family": "1.5 NA",
+    "displacement_cc": 1497,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e102"
+    },
+    "fuel": "Petrol",
+    "engine_family": "1.5 Turbo",
+    "displacement_cc": 1497,
+    "aspiration": "Turbo",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e103"
+    },
+    "fuel": "Petrol",
+    "engine_family": "2.0 Turbo",
+    "displacement_cc": 1998,
+    "aspiration": "Turbo",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e104"
+    },
+    "fuel": "Diesel",
+    "engine_family": "1.5 Diesel",
+    "displacement_cc": 1493,
+    "aspiration": "Turbo",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e105"
+    },
+    "fuel": "Diesel",
+    "engine_family": "2.0 Diesel",
+    "displacement_cc": 1968,
+    "aspiration": "Turbo",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e106"
+    },
+    "fuel": "Hybrid",
+    "engine_family": "1.5 e:HEV",
+    "displacement_cc": 1498,
+    "aspiration": "NA",
+    "hybrid_type": "Strong"
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e107"
+    },
+    "fuel": "CNG",
+    "engine_family": "1.2 NA CNG",
+    "displacement_cc": 1197,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e108"
+    },
+    "fuel": "Petrol",
+    "engine_family": "97cc",
+    "displacement_cc": 97,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e109"
+    },
+    "fuel": "Petrol",
+    "engine_family": "110cc",
+    "displacement_cc": 110,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e10a"
+    },
+    "fuel": "Petrol",
+    "engine_family": "125cc",
+    "displacement_cc": 125,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e10b"
+    },
+    "fuel": "Petrol",
+    "engine_family": "150cc",
+    "displacement_cc": 150,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e10c"
+    },
+    "fuel": "Petrol",
+    "engine_family": "200cc",
+    "displacement_cc": 200,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e10d"
+    },
+    "fuel": "Petrol",
+    "engine_family": "250cc",
+    "displacement_cc": 250,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e10e"
+    },
+    "fuel": "Petrol",
+    "engine_family": "300cc",
+    "displacement_cc": 300,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e10f"
+    },
+    "fuel": "Petrol",
+    "engine_family": "350cc",
+    "displacement_cc": 350,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e110"
+    },
+    "fuel": "Petrol",
+    "engine_family": "390cc",
+    "displacement_cc": 399,
+    "aspiration": "NA",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e111"
+    },
+    "fuel": "EV",
+    "engine_family": "EV Motor",
+    "displacement_cc": 0,
+    "aspiration": "EV",
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e112"
+    },
+    "fuel": "Petrol",
+    "engine_family": "1.1 NA",
+    "displacement_cc": null,
+    "aspiration": null,
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e113"
+    },
+    "fuel": "Diesel",
+    "engine_family": "2.8 Diesel",
+    "displacement_cc": null,
+    "aspiration": null,
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e114"
+    },
+    "fuel": "Petrol",
+    "engine_family": "2.2 Diesel",
+    "displacement_cc": null,
+    "aspiration": null,
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e115"
+    },
+    "fuel": "Petrol",
+    "engine_family": "1.4 Turbo",
+    "displacement_cc": null,
+    "aspiration": null,
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e116"
+    },
+    "fuel": "Petrol",
+    "engine_family": "160cc",
+    "displacement_cc": null,
+    "aspiration": null,
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e117"
+    },
+    "fuel": "Petrol",
+    "engine_family": "373cc",
+    "displacement_cc": null,
+    "aspiration": null,
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e118"
+    },
+    "fuel": "Petrol",
+    "engine_family": "411cc",
+    "displacement_cc": null,
+    "aspiration": null,
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e119"
+    },
+    "fuel": "Petrol",
+    "engine_family": "155cc",
+    "displacement_cc": null,
+    "aspiration": null,
+    "hybrid_type": null
+  },
+  {
+    "_id": {
+      "$oid": "68bd6275306ad6922b42e11a"
+    },
+    "fuel": "Petrol",
+    "engine_family": "400cc",
+    "displacement_cc": null,
+    "aspiration": null,
+    "hybrid_type": null
+  }
+]

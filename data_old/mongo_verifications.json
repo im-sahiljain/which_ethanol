@@ -1,0 +1,95 @@
+[
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7f1"
+    },
+    "verification_key": "HONDA_2009",
+    "source": "Honda Cars India",
+    "note": "India-made Honda cars since Jan 1, 2009 are E20 material-compatible.",
+    "verified": true,
+    "urls": [
+      "https://www.hondacarindia.com/press-release/achieves-e20-compliance-across-its-product-range-towards-a-sustainable-future"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7f2"
+    },
+    "verification_key": "VAG_2020",
+    "source": "\u0160koda / Volkswagen India",
+    "note": "BSVI petrol cars sold on/after 01 Apr 2020 are E20-compatible (even if flap shows E5/E10).",
+    "verified": true,
+    "urls": [
+      "https://www.skoda-auto.co.in/owner-and-service/e20-compatibility",
+      "https://volkswagenlabs.co.in/app/site/e20-compatibility/"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7f3"
+    },
+    "verification_key": "KIA_2023",
+    "source": "Kia India",
+    "note": "BS6 Phase 2 (RDE) 2023 line-up (Seltos/Sonet/Carens) E20-ready.",
+    "verified": true,
+    "urls": [
+      "https://www.overdrive.in/news-cars-auto/2023-kia-seltos-sonet-carens-get-rde-compliant-powertrains/",
+      "https://www.overdrive.in/news-cars-auto/kia-india-updates-all-its-engines-to-bs6-phase-ii-compliant/"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7f4"
+    },
+    "verification_key": "GEN_2023",
+    "source": "Government / OMC rollout",
+    "note": "E20 retail rollout started Feb 6, 2023; BS6.2-era petrol (2023+) generally E20-ready. Verify per OEM.",
+    "verified": false,
+    "urls": ["https://www.pib.gov.in/PressReleasePage.aspx?PRID=1946412"]
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7f5"
+    },
+    "verification_key": "NISSAN_MAG",
+    "source": "Nissan / Autocar Professional",
+    "note": "Magnite: Turbo E20 Aug 2024; NA (BR10) E20 Mar 2025 \u2192 full range E20.",
+    "verified": true,
+    "urls": [
+      "https://www.autocarpro.in/news/nissan-magnite-achieves-export-milestone-completes-e20-compatibility-across-models-125216"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7f6"
+    },
+    "verification_key": "MG_HECTOR_2025",
+    "source": "Autocar Professional / V3Cars",
+    "note": "MG Hector petrol E20 compliant from Apr 2025.",
+    "verified": true,
+    "urls": [
+      "https://www.autocarpro.in/sitesearch/search/mg%20hector",
+      "https://www.v3cars.com/news/2025-mg-hector-updated-with-e20-fuel-compliance-prices-unchanged"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7f7"
+    },
+    "verification_key": "NON_PETROL",
+    "source": "N/A",
+    "note": "Ethanol applies to petrol only.",
+    "verified": true,
+    "urls": []
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7f8"
+    },
+    "verification_key": "LEGACY_EXIT",
+    "source": "OEM exit (Ford/Chevrolet)",
+    "note": "Exited before BS6.2; treat petrol as E10 unless otherwise stated.",
+    "verified": false,
+    "urls": []
+  }
+]

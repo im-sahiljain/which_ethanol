@@ -1,0 +1,386 @@
+[
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7c6"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7a7"
+    },
+    "model_name": "Swift",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7c7"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7a8"
+    },
+    "model_name": "Creta",
+    "vehicle_category": "Car",
+    "start_year": 2015,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7c8"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7a9"
+    },
+    "model_name": "Nexon",
+    "vehicle_category": "Car",
+    "start_year": 2017,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7c9"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7ac"
+    },
+    "model_name": "City",
+    "vehicle_category": "Car",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7ca"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7ae"
+    },
+    "model_name": "Kushaq",
+    "vehicle_category": "Car",
+    "start_year": 2021,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7cb"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7af"
+    },
+    "model_name": "Taigun",
+    "vehicle_category": "Car",
+    "start_year": 2021,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7cc"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7ad"
+    },
+    "model_name": "Seltos",
+    "vehicle_category": "Car",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7cd"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7ab"
+    },
+    "model_name": "Urban Cruiser Hyryder",
+    "vehicle_category": "Car",
+    "start_year": 2022,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7ce"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7b0"
+    },
+    "model_name": "Magnite",
+    "vehicle_category": "Car",
+    "start_year": 2020,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7cf"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c1"
+    },
+    "model_name": "Duke 125",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7d0"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c1"
+    },
+    "model_name": "Duke 200",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2012,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7d1"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c1"
+    },
+    "model_name": "Duke 250",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2017,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7d2"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c1"
+    },
+    "model_name": "Duke 390",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2013,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7d3"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c1"
+    },
+    "model_name": "RC 200",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2014,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7d4"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c1"
+    },
+    "model_name": "RC 390",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2014,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7d5"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c1"
+    },
+    "model_name": "Adventure 250",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2020,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7d6"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c1"
+    },
+    "model_name": "Adventure 390",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2020,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7d7"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c2"
+    },
+    "model_name": "Jawa Classic",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2018,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7d8"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c2"
+    },
+    "model_name": "Forty Two",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2018,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7d9"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c2"
+    },
+    "model_name": "Perak",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7da"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c3"
+    },
+    "model_name": "Roadster",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2022,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7db"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c3"
+    },
+    "model_name": "Scrambler",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2022,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7dc"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c3"
+    },
+    "model_name": "Adventure",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2022,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7dd"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c4"
+    },
+    "model_name": "Ninja 300",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2013,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7de"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c4"
+    },
+    "model_name": "Ninja 400",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2018,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7df"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c4"
+    },
+    "model_name": "Ninja 650",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7e0"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c4"
+    },
+    "model_name": "Z650",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2017,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7e1"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c4"
+    },
+    "model_name": "Versys 650",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2015,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7e2"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c5"
+    },
+    "model_name": "Imperiale 400",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7e3"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7c5"
+    },
+    "model_name": "TRK 502",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2019,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7e4"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7ba"
+    },
+    "model_name": "Splendor Plus",
+    "vehicle_category": "Motorcycle",
+    "start_year": 2010,
+    "end_year": 2025
+  },
+  {
+    "_id": {
+      "$oid": "68bc5709d40281ad5596a7e5"
+    },
+    "brand_id": {
+      "$oid": "68bc5709d40281ad5596a7bb"
+    },
+    "model_name": "Activa 110",
+    "vehicle_category": "Scooter",
+    "start_year": 2010,
+    "end_year": 2025
+  }
+]
