@@ -2,9 +2,6 @@
 
 import { useState } from "react";
 import {
-  ThumbsUp,
-  ThumbsDown,
-  ExternalLink,
   CheckCircle,
   Clock,
   AlertCircle,
@@ -132,6 +129,13 @@ export function VehicleResults({
     );
   }
 
+  console.log("vehicles:", vehicles, Array.isArray(vehicles));
+  const vehicleArray = Array.isArray(vehicles)
+    ? vehicles
+    : vehicles
+    ? [vehicles]
+    : [];
+
   return (
     <div className="space-y-8">
       <div className="flex items-center justify-between p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50">
@@ -149,7 +153,7 @@ export function VehicleResults({
       </div>
 
       <div className="grid gap-6">
-        {vehicles.map((vehicle) => (
+        {vehicleArray.map((vehicle) => (
           <Card
             key={vehicle._id?.toString()}
             className="bg-card/80 backdrop-blur-sm border-border/50 hover:shadow-xl hover:border-primary/20 transition-all duration-300 group"
