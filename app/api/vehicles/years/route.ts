@@ -6,7 +6,7 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const modelId = searchParams.get("model_id");
-    console.log("Year Get Model Id", modelId);
+    // console.log("Year Get Model Id", modelId);
     if (!modelId) {
       return NextResponse.json(
         { error: "Brand and model parameters are required" },

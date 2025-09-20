@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { AlertCircle, CheckCircle } from "lucide-react";
+import { AlertCircle, CheckCircle, HelpCircle } from "lucide-react";
 
 interface FeedbackDialogProps {
   isOpen: boolean;
@@ -32,8 +32,10 @@ export function FeedbackDialog({
   const [comment, setComment] = useState("");
   const [showInaccuracyForm, setShowInaccuracyForm] = useState(false);
 
-  const handleAccuracyClick = async (type: "confirm" | "report") => {
-    if (type === "confirm") {
+  const handleAccuracyClick = async (
+    type: "confirm" | "report" | "not-sure"
+  ) => {
+    if (type === "confirm" || type === "not-sure") {
       try {
         const response = await fetch("/api/accuracy-report", {
           method: "POST",
@@ -42,7 +44,7 @@ export function FeedbackDialog({
           },
           body: JSON.stringify({
             resultId,
-            type: "confirm",
+            type: type,
           }),
         });
 
@@ -112,6 +114,14 @@ export function FeedbackDialog({
             >
               <AlertCircle className="h-5 w-5 mr-2" />
               Report Inaccuracy
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full py-6"
+              onClick={() => handleAccuracyClick("not-sure")}
+            >
+              <HelpCircle className="h-5 w-5 mr-2" />
+              Not Sure
             </Button>
           </div>
         ) : (

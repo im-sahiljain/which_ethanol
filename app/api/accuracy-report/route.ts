@@ -10,23 +10,23 @@ export async function POST(request: Request) {
   try {
     const { resultId, type, inaccuracies, comment } = await request.json();
 
-    if (!resultId || !type || !["confirm", "report"].includes(type)) {
+    if (
+      !resultId ||
+      !type ||
+      !["confirm", "report", "not-sure"].includes(type)
+    ) {
       return NextResponse.json(
         { error: "Invalid request parameters" },
         { status: 400 }
       );
     }
 
-    // For now, we'll use a placeholder userId. In a real app, this would come from auth
-    const userId = "anonymous";
-
     const db = await getDatabase();
     const accuracyReports = db.collection<IAccuracyReport>(COLLECTION_NAME);
 
     const newEvent: IAccuracyEvent = {
       timestamp: new Date(),
-      userId,
-      type: type as "confirm" | "report",
+      type: type as "confirm" | "report" | "not-sure",
       inaccuracies: type === "report" ? inaccuracies : undefined,
       comment: type === "report" ? comment : undefined,
     };
@@ -44,7 +44,7 @@ export async function POST(request: Request) {
       }
     );
 
-    console.log("Accuracy report updated:", result);
+    // console.log("Accuracy report updated:", result);
 
     return NextResponse.json(
       {

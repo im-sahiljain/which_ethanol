@@ -59,11 +59,11 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
     loadModels();
   }, []);
 
-  console.log("brands:", brands);
-  console.log("models:", models);
-  console.log("years:", years);
-  console.log("loading:", loading);
-  console.log("vehicles prop:", vehicles);
+  // console.log("brands:", brands);
+  // console.log("models:", models);
+  // console.log("years:", years);
+  // console.log("loading:", loading);
+  // console.log("vehicles prop:", vehicles);
   useEffect(() => {
     if (activeTab !== "overview") {
       loadVehicles(activeTab as "verified" | "pending" | "unverified");
@@ -75,7 +75,7 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
       const response = await fetch("/api/admin/stats");
       if (response.ok) {
         const data = await response.json();
-        console.log("Dashboard stats:", data);
+        // console.log("Dashboard stats:", data);
         setStats(data);
       }
     } catch (error) {
@@ -83,7 +83,7 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
     }
   };
 
-  console.log("Stats in component:", stats);
+  // console.log("Stats in component:", stats);
 
   const loadVehicles = async (status: string) => {
     setVehiclesLoading(true);

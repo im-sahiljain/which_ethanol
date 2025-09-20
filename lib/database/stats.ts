@@ -66,12 +66,12 @@ export async function getDashboardStats(): Promise<DashboardStats> {
 
   const recentActivity: ActivityItem[] = recentVehicles.map((vehicle) => ({
     type: "vehicle_updated",
-    description: `${vehicle.brand} ${vehicle.model} (${vehicle.yearOfManufacture}) was updated`,
+    description: `${vehicle.brand} ${vehicle.model} (${vehicle.year}) was updated`,
     timestamp: vehicle.updatedAt,
     vehicleInfo: {
       brand: vehicle.brand,
       model: vehicle.model,
-      year: vehicle.yearOfManufacture,
+      year: vehicle.year,
     },
   }));
 

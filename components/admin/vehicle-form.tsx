@@ -1,22 +1,28 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { Loader2, Save, ArrowLeft } from "lucide-react"
-import type { VehicleData } from "@/lib/models/vehicle"
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Loader2, Save, ArrowLeft } from "lucide-react";
+import type { AdminVehicleFormData } from "@/lib/models/admin";
 
 interface VehicleFormProps {
-  vehicle?: VehicleData
+  vehicle?: AdminVehicleFormData;
 }
 
 export function VehicleForm({ vehicle }: VehicleFormProps) {
@@ -34,33 +40,39 @@ export function VehicleForm({ vehicle }: VehicleFormProps) {
     source: vehicle?.source || "",
     sourceLink: vehicle?.sourceLink || "",
     notes: vehicle?.notes || "",
-  })
+  });
 
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState("")
-  const [success, setSuccess] = useState("")
-  const router = useRouter()
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    setError("")
-    setSuccess("")
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+    setSuccess("");
 
     try {
-      const url = vehicle ? `/api/admin/vehicles/${vehicle._id}` : "/api/admin/vehicles"
-      const method = vehicle ? "PUT" : "POST"
+      const url = vehicle
+        ? `/api/admin/vehicles/${vehicle._id}`
+        : "/api/admin/vehicles";
+      const method = vehicle ? "PUT" : "POST";
 
       const response = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
-      })
+      });
 
-      const data = await response.json()
+      const data = await response.json();
 
       if (response.ok) {
-        setSuccess(vehicle ? "Vehicle updated successfully!" : "Vehicle created successfully!")
+        setSuccess(
+          vehicle
+            ? "Vehicle updated successfully!"
+            : "Vehicle created successfully!"
+        );
         if (!vehicle) {
           // Reset form for new vehicle
           setFormData({
@@ -73,32 +85,35 @@ export function VehicleForm({ vehicle }: VehicleFormProps) {
             source: "",
             sourceLink: "",
             notes: "",
-          })
+          });
         }
-        setTimeout(() => router.push("/admin"), 2000)
+        setTimeout(() => router.push("/admin"), 2000);
       } else {
-        setError(data.error || "Operation failed")
+        setError(data.error || "Operation failed");
       }
     } catch (error) {
-      setError("Network error. Please try again.")
+      setError("Network error. Please try again.");
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const handleInputChange = (field: string, value: any) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
-  }
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
 
-  const handleFuelCompatibilityChange = (fuelType: "E5" | "E10" | "E20", checked: boolean) => {
+  const handleFuelCompatibilityChange = (
+    fuelType: "E5" | "E10" | "E20",
+    checked: boolean
+  ) => {
     setFormData((prev) => ({
       ...prev,
       fuelCompatibility: {
         ...prev.fuelCompatibility,
         [fuelType]: checked,
       },
-    }))
-  }
+    }));
+  };
 
   return (
     <div className="max-w-2xl mx-auto space-y-6">
@@ -144,7 +159,9 @@ export function VehicleForm({ vehicle }: VehicleFormProps) {
                 <Input
                   id="engineVariant"
                   value={formData.engineVariant}
-                  onChange={(e) => handleInputChange("engineVariant", e.target.value)}
+                  onChange={(e) =>
+                    handleInputChange("engineVariant", e.target.value)
+                  }
                   required
                   disabled={loading}
                 />
@@ -157,7 +174,12 @@ export function VehicleForm({ vehicle }: VehicleFormProps) {
                   min="1900"
                   max={new Date().getFullYear() + 1}
                   value={formData.yearOfManufacture}
-                  onChange={(e) => handleInputChange("yearOfManufacture", Number.parseInt(e.target.value))}
+                  onChange={(e) =>
+                    handleInputChange(
+                      "yearOfManufacture",
+                      Number.parseInt(e.target.value)
+                    )
+                  }
                   required
                   disabled={loading}
                 />
@@ -171,7 +193,9 @@ export function VehicleForm({ vehicle }: VehicleFormProps) {
                   <Checkbox
                     id="e5"
                     checked={formData.fuelCompatibility.E5}
-                    onCheckedChange={(checked) => handleFuelCompatibilityChange("E5", checked as boolean)}
+                    onCheckedChange={(checked) =>
+                      handleFuelCompatibilityChange("E5", checked as boolean)
+                    }
                     disabled={loading}
                   />
                   <Label htmlFor="e5">E5 (5% Ethanol)</Label>
@@ -180,7 +204,9 @@ export function VehicleForm({ vehicle }: VehicleFormProps) {
                   <Checkbox
                     id="e10"
                     checked={formData.fuelCompatibility.E10}
-                    onCheckedChange={(checked) => handleFuelCompatibilityChange("E10", checked as boolean)}
+                    onCheckedChange={(checked) =>
+                      handleFuelCompatibilityChange("E10", checked as boolean)
+                    }
                     disabled={loading}
                   />
                   <Label htmlFor="e10">E10 (10% Ethanol)</Label>
@@ -189,7 +215,9 @@ export function VehicleForm({ vehicle }: VehicleFormProps) {
                   <Checkbox
                     id="e20"
                     checked={formData.fuelCompatibility.E20}
-                    onCheckedChange={(checked) => handleFuelCompatibilityChange("E20", checked as boolean)}
+                    onCheckedChange={(checked) =>
+                      handleFuelCompatibilityChange("E20", checked as boolean)
+                    }
                     disabled={loading}
                   />
                   <Label htmlFor="e20">E20 (20% Ethanol)</Label>
@@ -201,7 +229,9 @@ export function VehicleForm({ vehicle }: VehicleFormProps) {
               <Label htmlFor="verificationStatus">Verification Status</Label>
               <Select
                 value={formData.verificationStatus}
-                onValueChange={(value) => handleInputChange("verificationStatus", value)}
+                onValueChange={(value) =>
+                  handleInputChange("verificationStatus", value)
+                }
                 disabled={loading}
               >
                 <SelectTrigger>
@@ -233,7 +263,9 @@ export function VehicleForm({ vehicle }: VehicleFormProps) {
                 id="sourceLink"
                 type="url"
                 value={formData.sourceLink}
-                onChange={(e) => handleInputChange("sourceLink", e.target.value)}
+                onChange={(e) =>
+                  handleInputChange("sourceLink", e.target.value)
+                }
                 disabled={loading}
                 placeholder="https://..."
               />
@@ -277,7 +309,12 @@ export function VehicleForm({ vehicle }: VehicleFormProps) {
                   </>
                 )}
               </Button>
-              <Button type="button" variant="outline" onClick={() => router.push("/admin")} disabled={loading}>
+              <Button
+                type="button"
+                variant="outline"
+                onClick={() => router.push("/admin")}
+                disabled={loading}
+              >
                 Cancel
               </Button>
             </div>
@@ -285,5 +322,5 @@ export function VehicleForm({ vehicle }: VehicleFormProps) {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

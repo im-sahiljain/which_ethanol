@@ -43,8 +43,8 @@ export async function createAdmin(
 }
 
 export async function authenticateAdmin(username: string, password: string) {
-  console.log("Authenticating admin with username:", username);
-  console.log("Password:", password);
+  // console.log("Authenticating admin with username:", username);
+  // console.log("Password:", password);
   const db = await getDatabase();
   const collection = db.collection<AdminUser>("admins");
 
@@ -142,7 +142,7 @@ export async function getAdminById(id: string) {
   const db = await getDatabase();
   const collection = db.collection<AdminUser>("admins");
 
-  const admin = await collection.findOne({ _id: new ObjectId(id) });
+  const admin = await collection.findOne({ _id: id });
   if (!admin) return null;
 
   return {

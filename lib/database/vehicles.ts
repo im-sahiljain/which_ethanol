@@ -206,7 +206,7 @@ export async function getYearsByBrandAndModel(
   // Ensure model_id is an ObjectId
   const modelObjectId =
     typeof model_id === "string" ? new ObjectId(model_id) : model_id;
-  console.log("Querying with modelObjectId:", modelObjectId);
+  // console.log("Querying with modelObjectId:", modelObjectId);
 
   const vehicleYearFacts = await collection
     .find({ model_id: modelObjectId })

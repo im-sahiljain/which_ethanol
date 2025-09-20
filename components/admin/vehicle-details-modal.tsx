@@ -22,7 +22,7 @@ export function VehicleDetailsModal({
   isOpen,
   onClose,
 }: VehicleDetailsModalProps) {
-  console.log("vehicle in modal", vehicle);
+  // console.log("vehicle in modal", vehicle);
   if (!vehicle) return null;
 
   return (

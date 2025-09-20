@@ -17,39 +17,26 @@ export interface ModelNames {
   end_year: number;
 }
 
-// export interface VehicleData {
-//   _id?: string;
-//   brand: string;
-//   model: string;
-//   engineVariant: string;
-//   yearOfManufacture: number;
-//   fuelCompatibility: {
-//     E5: boolean;
-//     E10: boolean;
-//     E20: boolean;
-//   };
-//   verificationStatus: "verified" | "pending" | "unverified";
-//   source: string;
-//   sourceLink?: string;
-//   notes?: string;
-//   rating: {
-//     thumbsUp: number;
-//     thumbsDown: number;
-//   };
-//   createdAt: Date;
-//   updatedAt: Date;
-// }
-
 export interface VehicleData {
   _id?: ObjectId;
   brand_id: ObjectId;
   model_id: ObjectId;
   powertrain_id: ObjectId;
   transmission_id: ObjectId;
+  brand: string;
+  model: string;
   year: number;
+  yearOfManufacture: number;
   fuel_blends_supported: string; // e.g., "E5,E10"
   E20_compliant: "YES" | "NO"; // explicitly matches your data
   verification_id: ObjectId;
+  verificationStatus: "verified" | "pending" | "unverified";
+  createdAt: Date;
+  updatedAt: Date;
+  rating?: {
+    thumbsUp: number;
+    thumbsDown: number;
+  };
 }
 
 export interface VehicleSearchFilters {

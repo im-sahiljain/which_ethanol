@@ -23,6 +23,7 @@ import type {
   ModelNames,
 } from "@/lib/models/vehicle";
 import { useVehicleData } from "@/hooks/useVehicleData";
+import { collectBrowserData } from "@/lib/utils/browser";
 
 interface VehicleResultsProps {
   vehicle_fact: VehicleData[];
@@ -59,8 +60,27 @@ export function VehicleResults({
     }
   }, [loading, vehicles, feedbackSubmitted, hasClosedPopup]);
 
+  const recordSearchEvent = async (vehicleYearFactId: string) => {
+    try {
+      const browserData = collectBrowserData();
+      await fetch("/api/stats/searches", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          event: {
+            ...browserData,
+            vehicleYearFactId,
+          },
+        }),
+      });
+    } catch (error) {
+      console.error("Error recording search event:", error);
+    }
+  };
+
   const handleFeedbackClick = (resultId: string) => {
     setSelectedVehicle(resultId);
+    recordSearchEvent(resultId);
   };
 
   const handleFeedbackSubmit = (vehicleId: string) => {

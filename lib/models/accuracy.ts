@@ -1,9 +1,8 @@
 import { ObjectId } from "mongodb";
 
 export interface IAccuracyEvent {
-  timestamp: Date; // when the user clicked
-  userId: string; // who clicked
-  type: "confirm" | "report"; // accuracy type
+  timestamp: Date; // when clicked
+  type: "confirm" | "report" | "not-sure"; // accuracy type
   inaccuracies?: string[]; // e.g., ["E5", "E10"]
   comment?: string; // user's comment about the inaccuracy
 }

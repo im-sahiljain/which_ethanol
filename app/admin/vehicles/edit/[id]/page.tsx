@@ -1,31 +1,36 @@
-import { redirect } from "next/navigation"
-import { cookies } from "next/headers"
-import { verifyAdminToken } from "@/lib/database/admin"
-import { getVehicleById } from "@/lib/database/vehicles"
-import { VehicleForm } from "@/components/admin/vehicle-form"
+import { redirect } from "next/navigation";
+import { cookies } from "next/headers";
+import { verifyAdminToken } from "@/lib/database/admin";
+import { getVehicleById } from "@/lib/database/vehicles";
+import { VehicleForm } from "@/components/admin/vehicle-form";
+import { transformToFormData } from "@/lib/utils/transforms";
 
 interface EditVehiclePageProps {
-  params: Promise<{ id: string }>
+  params: Promise<{ id: string }>;
 }
 
-export default async function EditVehiclePage({ params }: EditVehiclePageProps) {
-  const { id } = await params
-  const cookieStore = await cookies()
-  const token = cookieStore.get("admin_token")?.value
+export default async function EditVehiclePage({
+  params,
+}: EditVehiclePageProps) {
+  const { id } = await params;
+  const cookieStore = await cookies();
+  const token = cookieStore.get("admin_token")?.value;
 
   if (!token) {
-    redirect("/admin/login")
+    redirect("/admin/login");
   }
 
-  const admin = await verifyAdminToken(token)
+  const admin = await verifyAdminToken(token);
   if (!admin) {
-    redirect("/admin/login")
+    redirect("/admin/login");
   }
 
-  const vehicle = await getVehicleById(id)
+  const vehicle = await getVehicleById(id);
   if (!vehicle) {
-    redirect("/admin")
+    redirect("/admin");
   }
+
+  const formData = await transformToFormData(vehicle);
 
   return (
     <div className="min-h-screen bg-background">
@@ -35,8 +40,8 @@ export default async function EditVehiclePage({ params }: EditVehiclePageProps) 
         </div>
       </header>
       <main className="container mx-auto px-4 py-8">
-        <VehicleForm vehicle={vehicle} />
+        <VehicleForm vehicle={formData} />
       </main>
     </div>
-  )
+  );
 }

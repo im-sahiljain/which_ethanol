@@ -160,10 +160,10 @@ export default function BrandsPage() {
     Object.entries(duplicates)
       .filter(([_, data]) => data.count > 1)
       .forEach(([key, data]) => {
-        console.log(`Duplicate found for ${data.modelName} (${data.year}):`);
-        console.log("Count:", data.count);
-        console.log("Entries:", data.entries);
-        console.log("---");
+        // console.log(`Duplicate found for ${data.modelName} (${data.year}):`);
+        // console.log("Count:", data.count);
+        // console.log("Entries:", data.entries);
+        // console.log("---");
       });
   }, [facts, models]);
 

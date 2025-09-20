@@ -77,7 +77,7 @@ export function VehicleSearch() {
 
   const loadYears = async (model_id: string) => {
     try {
-      console.log("Loading years for model_id:", model_id);
+      // console.log("Loading years for model_id:", model_id);
       const response = await fetch(`/api/vehicles/years?model_id=${model_id}`);
       const data = await response.json();
       setYears(data.years || []);
@@ -113,9 +113,27 @@ export function VehicleSearch() {
         throw new Error("No vehicles found matching your criteria");
       }
 
-      setResults(Array.isArray(data) ? data : [data]);
-      setTotal(Array.isArray(data) ? data.length : 1);
+      const searchResults = Array.isArray(data) ? data : [data];
+      setResults(searchResults);
+      setTotal(searchResults.length);
       setHasSearched(true);
+
+      // Record search event for each result
+      try {
+        await Promise.all(
+          searchResults.map((result) =>
+            fetch("/api/stats/searches", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                vehicleYearFactId: result._id,
+              }),
+            })
+          )
+        );
+      } catch (error) {
+        console.error("Error recording search event:", error);
+      }
     } catch (error) {
       console.error("Search failed:", error);
       setResults([]);
@@ -280,12 +298,12 @@ export function VehicleSearch() {
               {loading ? (
                 <>
                   <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                  Searching Database...
+                  Searching...
                 </>
               ) : (
                 <>
                   <Search className="mr-2 h-5 w-5" />
-                  Search Vehicles
+                  Search
                 </>
               )}
             </Button>

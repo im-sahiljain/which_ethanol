@@ -16,10 +16,10 @@ export function Header() {
             </div>
             <div>
               <span className="text-xl font-bold text-foreground">
-                FuelCheck
+                Which Ethanol
               </span>
               <div className="text-xs text-muted-foreground">
-                Vehicle Database
+                Check Ethanol Compatibility
               </div>
             </div>
           </Link>
