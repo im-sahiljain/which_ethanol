@@ -31,13 +31,27 @@ export async function POST(request: Request) {
       comment: type === "report" ? comment : undefined,
     };
 
+    const update: any = {
+      $push: { events: newEvent },
+      $set: { lastUpdated: new Date() },
+    };
+
+    switch (type) {
+      case "confirm":
+        update.$inc = { accurate: 1 };
+        break;
+      case "report":
+        update.$inc = { notAccurate: 1 };
+        break;
+      case "not-sure":
+        update.$inc = { notSure: 1 };
+        break;
+    }
+
     // Try to update existing report
     const result = await accuracyReports.findOneAndUpdate(
       { resultId },
-      {
-        $push: { events: newEvent },
-        $set: { lastUpdated: new Date() },
-      },
+      update,
       {
         upsert: true,
         returnDocument: "after",

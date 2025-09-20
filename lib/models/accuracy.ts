@@ -12,6 +12,9 @@ export interface IAccuracyReport {
   resultId: string; // which result this is for
   events: IAccuracyEvent[]; // array of clicks
   lastUpdated: Date; // for quick sorting/filtering
+  accurate?: number;
+  notAccurate?: number;
+  notSure?: number;
 }
 
 export const COLLECTION_NAME = "accuracy_reports";
