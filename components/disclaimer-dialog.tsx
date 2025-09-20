@@ -48,7 +48,9 @@ export function DisclaimerDialog() {
               This website was created to compile ethanol compatibility
               information for vehicles operating on Indian roads. While we
               strive for accuracy, this data is gathered from various online
-              sources and should be used as a reference only.
+              sources using <span className="text-primary font-bold">AI</span>{" "}
+              and should be used as a{" "}
+              <span className="text-red-500 font-bold">reference only </span>.
             </p>
             <p>
               For your vehicle&apos;s safety and optimal performance, we

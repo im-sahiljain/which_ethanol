@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function Header() {
   return (
-    <header className="bg-card/80 backdrop-blur-md border-b border-border/50 sticky top-0 z-50">
+    <header className="bg-card/80 backdrop-blur-md border-b border-border/50 sticky top-0 z-50 ">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link
@@ -37,7 +37,7 @@ export function Header() {
               asChild
               className="hover:bg-primary/10 hover:text-primary"
             >
-              <Link href="/about">About</Link>
+              <Link href="/Making-Ethanol-Info-Simple">About</Link>
             </Button>
             <Button
               variant="outline"

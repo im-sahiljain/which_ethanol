@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   CheckCircle,
   Clock,
@@ -10,27 +10,77 @@ import {
   Settings,
   Loader2,
   Search,
+  Car,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import type { VehicleData, VehicleSearchFilters } from "@/lib/models/vehicle";
+import { Button } from "@/components/ui/button";
+import { FeedbackDialog } from "@/components/feedback-dialog";
+import type {
+  VehicleBrands,
+  VehicleData,
+  VehicleSearchFilters,
+  ModelNames,
+} from "@/lib/models/vehicle";
+import { useVehicleData } from "@/hooks/useVehicleData";
 
 interface VehicleResultsProps {
   vehicle_fact: VehicleData[];
-  total: number;
   loading: boolean;
-  filters: VehicleSearchFilters;
 }
 
 export function VehicleResults({
   vehicle_fact: vehicles,
-  total,
   loading,
-  filters,
 }: VehicleResultsProps) {
   const [ratingLoading, setRatingLoading] = useState<string | null>(null);
+  const [selectedVehicle, setSelectedVehicle] = useState<string | null>(null);
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState<{ [key: string]: boolean }>({});
+  const [hasClosedPopup, setHasClosedPopup] = useState<{ [key: string]: boolean }>({});
 
+  // Auto-show popup after delay
+  useEffect(() => {
+    if (!loading && vehicles && vehicles.length > 0) {
+      const firstVehicleId = vehicles[0]._id?.toString();
+      if (firstVehicleId && !feedbackSubmitted[firstVehicleId] && !hasClosedPopup[firstVehicleId]) {
+        const timer = setTimeout(() => {
+          setSelectedVehicle(firstVehicleId);
+        }, 7000); // 7 seconds delay
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [loading, vehicles, feedbackSubmitted, hasClosedPopup]);
+
+  const handleFeedbackClick = (resultId: string) => {
+    setSelectedVehicle(resultId);
+  };
+
+  const handleFeedbackSubmit = (vehicleId: string) => {
+    setFeedbackSubmitted(prev => ({ ...prev, [vehicleId]: true }));
+    setSelectedVehicle(null);
+  };
+
+  const handlePopupClose = () => {
+    if (selectedVehicle) {
+      setHasClosedPopup(prev => ({ ...prev, [selectedVehicle]: true }));
+    }
+    setSelectedVehicle(null);
+  };
+
+  const {
+    brands,
+    models,
+    years,
+    loadModels,
+    loadBrands,
+    loadYears,
+    loading: vehicleLoading,
+  } = useVehicleData();
+
+  useEffect(() => {
+    loadModels();
+    loadBrands();
+  }, [loadModels, loadBrands]);
   const handleRating = async (vehicleId: string, rating: "up" | "down") => {
     setRatingLoading(vehicleId);
     try {
@@ -110,7 +160,7 @@ export function VehicleResults({
     );
   }
 
-  if (vehicles.length === 0) {
+  if (!vehicles || vehicles.length === 0) {
     return (
       <Card className="bg-card/80 backdrop-blur-sm border-border/50">
         <CardContent className="py-12">
@@ -120,25 +170,54 @@ export function VehicleResults({
             </div>
             <h3 className="text-xl font-semibold mb-2">No Results Found</h3>
             <p className="text-muted-foreground max-w-md mx-auto">
-              No vehicles match your search criteria. Try adjusting your filters
-              or search terms.
+              We couldn&apos;t find any vehicles matching your search. Please
+              check that:
             </p>
+            <ul className="text-muted-foreground max-w-md mx-auto mt-4 space-y-2 text-left list-disc list-inside">
+              <li>The model name is spelled correctly</li>
+              <li>The year selected is valid for this model</li>
+              <li>Try searching without the year to see all available years</li>
+            </ul>
           </div>
         </CardContent>
       </Card>
     );
   }
 
-  console.log("vehicles:", vehicles, Array.isArray(vehicles));
-  const vehicleArray = Array.isArray(vehicles)
-    ? vehicles
-    : vehicles
-    ? [vehicles]
-    : [];
+  // Ensure vehicles is always an array
+  const vehicleArray = Array.isArray(vehicles) ? vehicles : [];
+
+  const getVehicalName = (vehicle: VehicleData) => {
+    // Find the model first
+    const model = models.find(
+      (m) => m._id.toString() === vehicle.model_id?.toString()
+    );
+    if (!model) return "Unknown Brand Unknown Model";
+
+    // Then find the brand for that model
+    const brand = brands.find(
+      (b) => b._id.toString() === model.brand_id.toString()
+    );
+
+    const brandName = brand ? brand.brand_name : "Unknown Brand";
+    const modelName = model.model_name || "Unknown Model";
+
+    return `${brandName}    ${modelName} `;
+  };
+
+  const getModelName = (modelId: string) => {
+    const model = models.find((m) => m._id.toString() === modelId);
+    return model ? model.model_name : "Unknown Model";
+  };
+
+  const getBrnadName = (brandId: string) => {
+    const brand = brands.find((b) => b._id.toString() === brandId);
+    return brand ? brand.brand_name : "Unknown Brand";
+  };
 
   return (
     <div className="space-y-8">
-      <div className="flex items-center justify-between p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50">
+      {/* <div className="flex items-center justify-between p-6 bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50">
         <div>
           <h2 className="text-2xl font-bold text-foreground">Search Results</h2>
           <p className="text-muted-foreground mt-1">
@@ -150,7 +229,7 @@ export function VehicleResults({
           <CheckCircle className="h-4 w-4 text-green-600" />
           Verified data
         </div>
-      </div>
+      </div> */}
 
       <div className="grid gap-6">
         {vehicleArray.map((vehicle) => (
@@ -162,27 +241,32 @@ export function VehicleResults({
               <div className="flex items-start justify-between">
                 <div className="space-y-2">
                   <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
-                    {vehicle.brand_id?.toString()} {vehicle.model_id.toString()}
+                    {/* {vehicle.brand_id?.toString()} {vehicle.model_id.toString()} */}
+                    <div className="flex items-center gap-2">
+                      <Car className="h-6 w-6 text-primary" />
+                      {getVehicalName(vehicle)}
+                    </div>
+                    {/* {getBrnadName(vehicle.brand_id.toString())} {getModelName(vehicle.model_id.toString())} */}
                   </CardTitle>
                   <div className="flex items-center gap-4 text-muted-foreground">
                     <div className="flex items-center gap-1">
                       <Calendar className="h-4 w-4" />
                       <span className="font-medium">{vehicle.year}</span>
                     </div>
-                    <div className="flex items-center gap-1">
+                    {/* <div className="flex items-center gap-1">
                       <Settings className="h-4 w-4" />
                       <span>{vehicle.powertrain_id.toString()}</span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
-                <Badge
+                {/* <Badge
                   className={`${getVerificationColor(
                     vehicle.verification_id.toString()
                   )} flex items-center gap-1.5 px-3 py-1.5 font-medium`}
                 >
                   {getVerificationIcon(vehicle.verification_id.toString())}
                   {vehicle.verification_id.toString()}
-                </Badge>
+                </Badge> */}
               </div>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -271,6 +355,27 @@ export function VehicleResults({
                 </div>
               </div>
 
+              <div className="flex justify-center pt-4">
+                {feedbackSubmitted[vehicle._id?.toString() || ''] ? (
+                  <div className="text-center text-green-600 font-medium py-2">
+                    Thanks for your feedback and support! 🙏
+                  </div>
+                ) : (
+                  !hasClosedPopup[vehicle._id?.toString() || ''] && (
+                    <Button
+                      variant="outline"
+                      onClick={() =>
+                        handleFeedbackClick(vehicle._id?.toString() || "")
+                      }
+                      className="w-full max-w-sm"
+                    >
+                      <AlertCircle className="h-4 w-4 mr-2" />
+                      Give Feedback on Data Accuracy
+                    </Button>
+                  )
+                )}
+              </div>
+
               {/* {vehicle.notes && (
                 <div className="p-4 bg-blue-50 rounded-xl border border-blue-200">
                   <h4 className="font-semibold text-blue-900 mb-2">
@@ -335,6 +440,15 @@ export function VehicleResults({
           </Card>
         ))}
       </div>
+
+      {selectedVehicle && (
+        <FeedbackDialog
+          resultId={selectedVehicle}
+          isOpen={true}
+          onClose={handlePopupClose}
+          onFeedbackSubmit={() => handleFeedbackSubmit(selectedVehicle)}
+        />
+      )}
     </div>
   );
 }

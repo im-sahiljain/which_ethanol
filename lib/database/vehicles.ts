@@ -143,6 +143,13 @@ export async function getBrands(): Promise<VehicleBrands[]> {
   return brands;
 }
 
+export async function getAllModels(): Promise<ModelNames[]> {
+  const db = await getDatabase();
+  const collection = db.collection<ModelNames>("models");
+  const models = await collection.find().sort({ model_name: 1 }).toArray();
+  return models;
+}
+
 // export async function getModelsByBrand(brand: string) {
 //   const db = await getDatabase();
 //   const collection = db.collection<VehicleData>("vehicles");
@@ -213,8 +220,45 @@ export async function getVehicleFacts(): Promise<VehicleData[]> {
   const db = await getDatabase();
   const collection = db.collection<VehicleData>("vehicle_year_facts");
 
-  // return the full documents, sorted by brand_name
-  const vehicleFacts = await collection.find().toArray();
+  const vehicleFacts = await collection
+    .aggregate([
+      {
+        $lookup: {
+          from: "brands",
+          localField: "brand_id",
+          foreignField: "_id",
+          as: "brand",
+        },
+      },
+      {
+        $unwind: "$brand",
+      },
+      {
+        $lookup: {
+          from: "models",
+          localField: "model_id",
+          foreignField: "_id",
+          as: "model",
+        },
+      },
+      {
+        $unwind: "$model",
+      },
+      {
+        $project: {
+          _id: 1,
+          model_id: "$model_id",
+          powertrain_id: "$powertrain_id",
+          transmission_id: "$transmission_id",
+          year: 1,
+          fuel_blends_supported: 1,
+          E20_compliant: 1,
+          "brand.brand_name": 1,
+          "model.model_name": 1,
+        },
+      },
+    ])
+    .toArray();
 
-  return vehicleFacts;
+  return vehicleFacts as VehicleData[];
 }

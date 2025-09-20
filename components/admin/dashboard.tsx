@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import type { DashboardStats } from "@/lib/database/stats";
 import type { VehicleData } from "@/lib/models/vehicle";
+import { useVehicleData } from "@/hooks/useVehicleData";
 
 interface AdminDashboardProps {
   admin: {
@@ -40,11 +41,29 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
   const [activeTab, setActiveTab] = useState("overview");
   const [deleteLoading, setDeleteLoading] = useState<string | null>(null);
   const router = useRouter();
+  // Define filters (adjust as needed for your use case)
+  const filters = {};
+
+  const {
+    brands,
+    models,
+    years,
+    loadModels,
+    loadBrands,
+    loadYears,
+    loading: vehicleLoading,
+  } = useVehicleData();
 
   useEffect(() => {
     loadStats();
+    loadModels();
   }, []);
 
+  console.log("brands:", brands);
+  console.log("models:", models);
+  console.log("years:", years);
+  console.log("loading:", loading);
+  console.log("vehicles prop:", vehicles);
   useEffect(() => {
     if (activeTab !== "overview") {
       loadVehicles(activeTab as "verified" | "pending" | "unverified");
@@ -262,7 +281,7 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold text-yellow-600">
-                    {stats?.pendingRecords || 0}
+                    {/* {stats?.pendingRecords || 0} */}
                   </div>
                   <p className="text-xs text-muted-foreground">
                     Records awaiting verification
@@ -279,7 +298,7 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
                 </CardHeader>
                 <CardContent>
                   <div className="text-2xl font-bold">
-                    {stats?.totalRatings || 0}
+                    {/* {stats?.totalRatings || 0} */}
                   </div>
                   <p className="text-xs text-muted-foreground">
                     User feedback received
@@ -301,7 +320,23 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
                     onClick={() => router.push("/admin/brands")}
                   >
                     <Plus className="mr-2 h-4 w-4" />
-                    Brands
+                    All Brands
+                  </Button>
+                  <Button
+                    className="w-full justify-start bg-transparent"
+                    variant="outline"
+                    onClick={() => router.push("/admin/models")}
+                  >
+                    <Plus className="mr-2 h-4 w-4" />
+                    All Models
+                  </Button>
+                  <Button
+                    className="w-full justify-start bg-transparent"
+                    variant="outline"
+                    onClick={() => router.push("/admin/year-facts")}
+                  >
+                    <Plus className="mr-2 h-4 w-4" />
+                    Compliance Year Facts
                   </Button>
                   <Button
                     className="w-full justify-start bg-transparent"
@@ -333,7 +368,7 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
                     onClick={() => setActiveTab("pending")}
                   >
                     <Clock className="mr-2 h-4 w-4" />
-                    Review Pending Records ({stats?.pendingRecords || 0})
+                    {/* Review Pending Records ({stats?.pendingRecords || 0}) */}
                   </Button>
                   <Button
                     className="w-full justify-start bg-transparent"
@@ -370,7 +405,7 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    {stats?.recentActivity
+                    {/* {stats?.recentActivity
                       ?.slice(0, 5)
                       .map((activity, index) => (
                         <div
@@ -391,7 +426,7 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
                       <p className="text-muted-foreground">
                         No recent activity
                       </p>
-                    )}
+                    )} */}
                   </div>
                 </CardContent>
               </Card>
@@ -407,10 +442,10 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
                 </h2>
                 <div className="flex items-center gap-4">
                   <Badge variant="secondary">
-                    {status === "verified" && stats?.verifiedRecords}
+                    {/* {status === "verified" && stats?.verifiedRecords}
                     {status === "pending" && stats?.pendingRecords}
                     {status === "unverified" && stats?.unverifiedRecords}
-                    {" records"}
+                    {" records"} */}
                   </Badge>
                   <Button onClick={() => router.push("/admin/vehicles/add")}>
                     <Plus className="mr-2 h-4 w-4" />
@@ -419,7 +454,7 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
                 </div>
               </div>
 
-              {vehiclesLoading ? (
+              {/* {vehiclesLoading ? (
                 <Card>
                   <CardContent className="py-8">
                     <div className="text-center text-muted-foreground">
@@ -527,7 +562,7 @@ export function AdminDashboard({ admin }: AdminDashboardProps) {
                     </Card>
                   )}
                 </div>
-              )}
+              )} */}
             </TabsContent>
           ))}
         </Tabs>

@@ -42,7 +42,7 @@ export interface ModelNames {
 
 export interface VehicleData {
   _id?: ObjectId;
-  brand_id?: ObjectId;
+  brand_id: ObjectId;
   model_id: ObjectId;
   powertrain_id: ObjectId;
   transmission_id: ObjectId;

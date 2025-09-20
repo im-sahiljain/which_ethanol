@@ -8,38 +8,60 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
 
-    const filters: VehicleSearchFilters = {};
+    // Validate required parameters
+    const model = searchParams.get("model");
+    const year = searchParams.get("year");
 
-    if (searchParams.get("model")) {
-      filters.model = searchParams.get("model")!;
+    if (!model) {
+      return NextResponse.json(
+        { error: "Model parameter is required" },
+        { status: 400 }
+      );
     }
 
-    if (searchParams.get("year")) {
-      filters.yearOfManufacture = Number.parseInt(searchParams.get("year")!);
+    // Convert and validate year if provided
+    let yearNumber: number | undefined;
+    if (year) {
+      yearNumber = Number.parseInt(year);
+      if (isNaN(yearNumber)) {
+        return NextResponse.json(
+          { error: "Invalid year parameter" },
+          { status: 400 }
+        );
+      }
     }
 
-    console.log("filters in GET", filters);
+    try {
+      const modelObjectId = new ObjectId(model);
 
-    const db = await getDatabase();
-    const collection = db.collection<VehicleData>("vehicle_year_facts");
+      const db = await getDatabase();
+      const collection = db.collection<VehicleData>("vehicle_year_facts");
 
-    const modelObjectId =
-      typeof filters.model === "string"
-        ? new ObjectId(filters.model)
-        : filters.model;
+      const query: any = { model_id: modelObjectId };
+      if (yearNumber) {
+        query.year = yearNumber;
+      }
 
-    console.log("Querying with modelObjectId:", modelObjectId);
+      const result = await collection.find(query).toArray();
 
-    const result = await collection
-      .find({
-        model_id: modelObjectId,
-        year: filters.yearOfManufacture,
-      })
-      .toArray();
+      if (!result || result.length === 0) {
+        return NextResponse.json(
+          { error: "No vehicles found matching the criteria" },
+          { status: 404 }
+        );
+      }
 
-    console.log("result in search get", result);
-
-    return NextResponse.json(result[0]);
+      // Return all matching results, not just the first one
+      return NextResponse.json(result);
+    } catch (error) {
+      if (error instanceof Error && error.message.includes("ObjectId")) {
+        return NextResponse.json(
+          { error: "Invalid model ID format" },
+          { status: 400 }
+        );
+      }
+      throw error; // Re-throw to be caught by outer catch
+    }
   } catch (error) {
     console.error("Search API error:", error);
     return NextResponse.json(

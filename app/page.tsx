@@ -7,7 +7,7 @@ import { DisclaimerDialog } from "@/components/disclaimer-dialog";
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/30">
-      {/* <DisclaimerDialog /> */}
+      <DisclaimerDialog />
       <Header />
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-6xl mx-auto">
@@ -64,34 +64,7 @@ export default function HomePage() {
           <VehicleSearch />
         </div>
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
-
-// import { VehicleSearch } from "@/components/vehicle-search"
-// import { Header } from "@/components/header"
-// import { Footer } from "@/components/footer"
-
-// export default function HomePage() {
-//   return (
-//     <div className="min-h-screen bg-background">
-//       <Header />
-//       <main className="container mx-auto px-4 py-8">
-//         <div className="max-w-4xl mx-auto">
-//           <div className="text-center mb-12">
-//             <h1 className="text-4xl md:text-5xl font-bold text-primary mb-4 text-balance">
-//               Vehicle Fuel Compatibility Database
-//             </h1>
-//             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-//               Find reliable fuel compatibility information for your vehicle. Search by brand, model, and year to ensure
-//               you're using the right fuel type.
-//             </p>
-//           </div>
-//           <VehicleSearch />
-//         </div>
-//       </main>
-//       <Footer />
-//     </div>
-//   )
-// }

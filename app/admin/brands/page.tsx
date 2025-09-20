@@ -11,7 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
-import { Plus, Pencil, Trash2 } from "lucide-react";
+import { Plus, Pencil, Trash2, ArrowLeft } from "lucide-react";
 import type { VehicleBrands } from "@/lib/models/vehicle";
 import { format } from "date-fns";
 
@@ -72,6 +72,11 @@ export default function BrandsPage() {
           </Button>
         </div>
       </header>
+
+      <Button variant="outline" onClick={() => router.push("/admin")}>
+        <ArrowLeft className="mr-2 h-4 w-4" />
+        Back to Dashboard
+      </Button>
 
       <main className="container mx-auto px-4 py-8">
         <div className="rounded-md border">

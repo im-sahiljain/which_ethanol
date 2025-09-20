@@ -88,26 +88,39 @@ export function VehicleSearch() {
 
   const handleSearch = async () => {
     setLoading(true);
-    setHasSearched(true);
 
     try {
+      // Validate required fields
+      if (!filters.model) {
+        throw new Error("Please select a model");
+      }
+
       const searchParams = new URLSearchParams();
-      // if (filters.brand) searchParams.set("brand", filters.brand);
-      if (filters.model) searchParams.set("model", filters.model);
-      if (filters.yearOfManufacture)
+      searchParams.set("model", filters.model);
+      if (filters.yearOfManufacture) {
         searchParams.set("year", filters.yearOfManufacture.toString());
-      // if (filters.fuelType) searchParams.set("fuelType", filters.fuelType);
+      }
 
       const response = await fetch(`/api/vehicles/search?${searchParams}`);
-      console.log("response in vehicle search");
       const data = await response.json();
-      console.log("data in vehicle search", data);
-      setResults(data || []);
-      setTotal(data?.length || 0);
+
+      if (!response.ok) {
+        throw new Error(data.error || "Search failed");
+      }
+
+      // Even if the response is ok, check if we got any results
+      if (!data || (Array.isArray(data) && data.length === 0)) {
+        throw new Error("No vehicles found matching your criteria");
+      }
+
+      setResults(Array.isArray(data) ? data : [data]);
+      setTotal(Array.isArray(data) ? data.length : 1);
+      setHasSearched(true);
     } catch (error) {
       console.error("Search failed:", error);
       setResults([]);
       setTotal(0);
+      setHasSearched(true); // Still show the no results message
     } finally {
       setLoading(false);
     }
@@ -154,7 +167,7 @@ export function VehicleSearch() {
                   }))
                 }
               >
-                <SelectTrigger className="h-12 bg-background border-border/50 hover:border-primary/50 transition-colors">
+                <SelectTrigger className="h-12 bg-background border-border/50 hover:border-primary/50 transition-colors w-full">
                   <SelectValue placeholder="Select brand" />
                 </SelectTrigger>
                 <SelectContent>
@@ -186,7 +199,7 @@ export function VehicleSearch() {
                 }
                 disabled={!filters.brand}
               >
-                <SelectTrigger className="h-12 bg-background border-border/50 hover:border-primary/50 transition-colors disabled:opacity-50">
+                <SelectTrigger className="h-12 bg-background border-border/50 hover:border-primary/50 transition-colors disabled:opacity-50 w-full">
                   <SelectValue placeholder="Select model" />
                 </SelectTrigger>
                 <SelectContent>
@@ -217,7 +230,7 @@ export function VehicleSearch() {
                 }
                 disabled={!filters.model}
               >
-                <SelectTrigger className="h-12 bg-background border-border/50 hover:border-primary/50 transition-colors disabled:opacity-50">
+                <SelectTrigger className="h-12 bg-background border-border/50 hover:border-primary/50 transition-colors disabled:opacity-50 w-full">
                   <SelectValue placeholder="Select year" />
                 </SelectTrigger>
                 <SelectContent>
@@ -291,9 +304,8 @@ export function VehicleSearch() {
       {hasSearched && (
         <VehicleResults
           vehicle_fact={results}
-          total={total}
+          // total={total}
           loading={loading}
-          filters={filters}
         />
       )}
     </div>
