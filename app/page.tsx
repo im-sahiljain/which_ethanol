@@ -37,8 +37,7 @@ export default function HomePage() {
                 Comprehensive Database
               </h3>
               <p className="text-muted-foreground text-sm">
-                Extensive collection of vehicle fuel compatibility data from
-                verified sources
+                Extensive collection of vehicle fuel compatibility data.
               </p>
             </div>
             <div className="text-center p-6 rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 hover:shadow-lg transition-all duration-300">
@@ -58,7 +57,7 @@ export default function HomePage() {
               </div>
               <h3 className="text-lg font-semibold mb-2">Community Driven</h3>
               <p className="text-muted-foreground text-sm">
-                Review compatibility information to help other users
+                Review compatibility information to help other users.
               </p>
             </div>
           </div>
