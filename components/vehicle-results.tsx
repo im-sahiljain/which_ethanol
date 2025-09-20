@@ -35,14 +35,22 @@ export function VehicleResults({
 }: VehicleResultsProps) {
   const [ratingLoading, setRatingLoading] = useState<string | null>(null);
   const [selectedVehicle, setSelectedVehicle] = useState<string | null>(null);
-  const [feedbackSubmitted, setFeedbackSubmitted] = useState<{ [key: string]: boolean }>({});
-  const [hasClosedPopup, setHasClosedPopup] = useState<{ [key: string]: boolean }>({});
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState<{
+    [key: string]: boolean;
+  }>({});
+  const [hasClosedPopup, setHasClosedPopup] = useState<{
+    [key: string]: boolean;
+  }>({});
 
   // Auto-show popup after delay
   useEffect(() => {
     if (!loading && vehicles && vehicles.length > 0) {
       const firstVehicleId = vehicles[0]._id?.toString();
-      if (firstVehicleId && !feedbackSubmitted[firstVehicleId] && !hasClosedPopup[firstVehicleId]) {
+      if (
+        firstVehicleId &&
+        !feedbackSubmitted[firstVehicleId] &&
+        !hasClosedPopup[firstVehicleId]
+      ) {
         const timer = setTimeout(() => {
           setSelectedVehicle(firstVehicleId);
         }, 7000); // 7 seconds delay
@@ -56,13 +64,13 @@ export function VehicleResults({
   };
 
   const handleFeedbackSubmit = (vehicleId: string) => {
-    setFeedbackSubmitted(prev => ({ ...prev, [vehicleId]: true }));
+    setFeedbackSubmitted((prev) => ({ ...prev, [vehicleId]: true }));
     setSelectedVehicle(null);
   };
 
   const handlePopupClose = () => {
     if (selectedVehicle) {
-      setHasClosedPopup(prev => ({ ...prev, [selectedVehicle]: true }));
+      setHasClosedPopup((prev) => ({ ...prev, [selectedVehicle]: true }));
     }
     setSelectedVehicle(null);
   };
@@ -356,12 +364,12 @@ export function VehicleResults({
               </div>
 
               <div className="flex justify-center pt-4">
-                {feedbackSubmitted[vehicle._id?.toString() || ''] ? (
+                {feedbackSubmitted[vehicle._id?.toString() || ""] ? (
                   <div className="text-center text-green-600 font-medium py-2">
                     Thanks for your feedback and support! 🙏
                   </div>
                 ) : (
-                  !hasClosedPopup[vehicle._id?.toString() || ''] && (
+                  !hasClosedPopup[vehicle._id?.toString() || ""] && (
                     <Button
                       variant="outline"
                       onClick={() =>
