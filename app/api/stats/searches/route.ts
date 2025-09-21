@@ -24,6 +24,7 @@ export async function POST(request: Request) {
       { vehicleYearFactId },
       {
         $push: { timestamps: now },
+        $inc: { count: 1 },
       },
       {
         upsert: true,
