@@ -1,8 +1,9 @@
 import { MongoClient, ObjectId } from "mongodb";
 import fs from "fs";
-
+import dotenv from "dotenv";
+dotenv.config();
 // === CONFIGURATION ===
-const MONGODB_URI = "mongodb+srv://whichEthanol:WhichEthanol@cluster.7qwu2ui.mongodb.net/?retryWrites=true&w=majority&appName=Cluster";
+const MONGODB_URI = process.env.MONGODB_URI;
 const DATABASE_NAME = "Which_Ethanol";
 const COLLECTION_NAME = "brands";
 const JSON_FILE_PATH = "/home/sahil/project/vehicle-fuel-app/data/mongo_brands.json"; // Path to your JSON file
