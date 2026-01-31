@@ -24,16 +24,12 @@ Built for speed and insight.
 
 ## 🛠️ Tech Stack
 
-**Frontend**
+**Technologies**
 - **Framework**: Next.js 15 (React)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS 4, shadcn/ui
 - **Icons**: Lucide React
 - **Forms**: React Hook Form
-- **Visualization**: Recharts
-
-**Backend**
-- **Runtime**: Node.js
 - **Database**: MongoDB (with Mongoose & Native Driver)
 - **Validation**: Zod
 - **API**: Next.js Server Actions / API Routes

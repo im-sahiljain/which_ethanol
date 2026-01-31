@@ -42,19 +42,27 @@ export async function createAdmin(
   return result.insertedId;
 }
 
-export async function authenticateAdmin(username: string, password: string) {
-  // console.log("Authenticating admin with username:", username);
+export async function authenticateAdmin(email: string, password: string) {
+  // console.log("Authenticating admin with email:", email);
   // console.log("Password:", password);
   const db = await getDatabase();
   const collection = db.collection<AdminUser>("admins");
 
-  const admin = await collection.findOne({ username });
+  const admin = await collection.findOne({ email });
+  // console.log(admin)
   if (!admin) {
     return null;
   }
 
   // const isValidPassword = await bcrypt.compare(password, admin.passwordHash)
-  const isValidPassword = password;
+
+  const isValidPassword = password === admin.passwordHash
+
+  // console.log(isValidPassword)
+  // console.log(admin.passwordHash)
+  // console.log(password)
+
+  // const isValidPassword = password;
   if (!isValidPassword) {
     return null;
   }
