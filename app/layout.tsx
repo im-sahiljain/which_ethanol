@@ -7,6 +7,7 @@ import { Suspense } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://whichethanol.imsahiljain.in"),
   title: "Which Ethanol",
   description:
     "Find reliable fuel compatibility information for your vehicle. Search by brand, model, and year.",
